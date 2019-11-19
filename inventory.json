@@ -1,0 +1,53 @@
+{
+    "Rice":[
+    {
+        "name": "WhiteRice",
+        "weight":"500",
+        "pricePerKg":"65"
+    },
+    {
+        "name": "BrownRice",
+        "weight":"100",
+        "pricePerKg":"150"
+    },
+    {
+        "name": "BasmatiRice",
+        "weight":"300",
+        "pricePerKg":"100"
+    }
+    ],
+    "Pulses":[
+    {
+        "name": "KidneyBeans",
+        "weight": "200",
+        "pricePerKg": "50"
+    },
+    {
+        "name": "LimaBeans",
+        "weight": "100",
+        "pricePerKg": "30" 
+    },
+    {
+        "name": "BroadBeans",
+        "weight": "50",
+        "pricePerKg": "70" 
+    }
+    ],
+    "Wheat":[
+    {
+        "name" : "Ashriwad",
+        "weight": "300",
+        "pricePerKg": "80"
+    },
+    {
+        "name" : "Pillsbury",
+        "weight": "100",
+        "pricePerKg": "75"  
+    },
+    {
+        "name" : "RefreshOrganic",
+        "weight": "50",
+        "pricePerKg": "59"
+    }
+    ]
+}

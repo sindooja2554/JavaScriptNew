@@ -1,0 +1,57 @@
+//git config command is used to set user name and email to your commit
+---git config -global user.name "sindooja2554"
+---git config -global user.email "sindoojagajam@gmail.com"
+
+//git init is used to start new repository
+---git init functional
+
+//git clone is used to obtain a repository from an existing URL.
+---git clone URL
+
+//git add is used to adds file to an staging area
+---git add filename
+
+//git commit -m is used to records or snapshots the file permanently in the version history.
+---git commit -m "message"
+
+//git status lists all the files that have to be committed.
+---git status
+
+//git log is used to list the history for the current branch.
+---git log
+
+//git show shows the metadata and content changes of the specified commit.
+--- git show [commit] 
+
+//git branch creates new branch
+---git branch [branch name]
+
+//delete the branch 
+---git branch -d [branchname]
+
+//git push is used commit changes to remote repository
+---git push origin master  
+
+//npm -v is used to find version of npm
+--- npm -v  
+
+//npm install is used to install particular module
+---npm install -g mocha
+
+//the following command to check all the modules installed globally 
+--- npm ls -g 
+
+//following command is used to update the particular module
+---npm update [module_name]
+
+//following command is used to search the particular module
+---npm search [module_name]
+
+//following command is used to find all our installs
+---npm config list
+
+//used to find if any updates available for package
+---npm outdated
+
+//used to show the report of vulnerabilities 
+---npm audit
