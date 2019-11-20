@@ -8,7 +8,7 @@ class companyShare
 {
     constructor()
     {
-        var content = fs.readFileSync('/home/admin1/javascript-master/companyShare.json');
+        var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/companyShare.json');
         this.value=JSON.parse(content);
     }
 
@@ -63,12 +63,12 @@ class companyShare
             this.value.companyShare.push(current.data);
             current=current.next;
         }
-        fs.writeFileSync('/home/admin1/javascript-master/companyShare.json',JSON.stringify(this.value));
+        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/companyShare.json',JSON.stringify(this.value));
     }
 
     displaycompanyShare()
     {
-        var content = fs.readFileSync('/home/admin1/javascript-master/companyShare.json');
+        var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/companyShare.json');
         var data = JSON.parse(content);
         console.log(data);
     }

@@ -156,8 +156,8 @@ class Queue
                             //total balance after withdrawal
                             accBalance = accBalance - withdraw;
                             console.log("Updated account balance is: " + accBalance);
+                            console.log("person withdrew " + withdraw);
                         }
-                        console.log("person withdrew " + withdraw);
                         people--;
                         break;
                     default:

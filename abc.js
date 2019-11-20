@@ -17,7 +17,7 @@ u.isBalancedParentheses();*/
 /*var u = require('./utility/utility');
 console.log("Enter a=");
 var a = u.inputStringRead();
-console.log(a);*/
+console.log("a="+a);
 var utility= require('./utility/QueueUsingLinkedList')
 var util = new utility.Queue();
 util.enqueue(5);
@@ -25,4 +25,4 @@ util.enqueue(1);
 util.enqueue(0);
 
 var str = util.display();
-console.log(str);
+console.log(str);*/

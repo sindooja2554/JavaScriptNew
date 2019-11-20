@@ -10,21 +10,26 @@ methods.inputStringRead = function(){
     try{
         var value ;
         value = readline.question("");
-        var content = /^[a-zA-Z]+$/;
-        //console.log(content.test(value));
-        if(!content.test(value))    
+        //console.log(readline.question());
+        /*var content = /^[a-zA-Z]+$/;
+        console.log(content.test(value));
+       if(!content.test(value))    
         {
             console.log('Should be a character string');
+            value = readline.question("");
             methods.inputStringRead();
+            //throw  'Should be a character string'
+
         }
         else
-        {
+        {*/
             return value;
-        }
+        //}
 
     }
     catch(e)
     {
+        //methods.inputStringRead();
         return e;
     }
 }

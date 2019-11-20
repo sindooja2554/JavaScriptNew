@@ -18,10 +18,16 @@ function stock()
                 u.display();
                 break;
             case 2:
-                u.info();
+                u.display();
+                console.log("Enter between 1-n=");
+                var choice = util.inputIntegerRead();
+                u.info(choice);
                 break;
             case 3:
-                u.purchase();
+                u.display();
+                console.log("Enter share you wanna purchase(in between 1-n)=");
+                var numberOfPurchases = util.inputIntegerRead();
+                u.purchase(numberOfPurchases);
                 break;
             case 4:
                 return

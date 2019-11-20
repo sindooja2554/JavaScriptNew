@@ -5,9 +5,8 @@ module.exports={
     {
         try
         {
-            var object = object;
-            if(typeof(inventory)!=object)   throw   'Please Pass Valid Input'
             if(inventory==undefined || inventory==null)   throw   'Please Pass Valid Input'
+            if(inventory==' ')  throw  'Cannot be empty'
             console.log("InventoryMenu->");
             console.log("1.Rice");
             console.log("2.Pulses");
@@ -35,7 +34,7 @@ module.exports={
                         catch(e)
                         {
                             return e
-                     }
+                        }
                 case 2:
                         try
                         {
@@ -83,3 +82,4 @@ module.exports={
         }
     }
 }
+

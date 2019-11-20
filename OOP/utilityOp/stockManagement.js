@@ -4,7 +4,7 @@ class stock
 {
     constructor()
     {
-        var content = fs.readFileSync('/home/admin1/javascript-master/stock.json');
+        var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/stock.json');
         this.data = JSON.parse(content);
     }
 }
@@ -21,49 +21,52 @@ class stockManagement extends stock
     }
 
     //function to display shares and price of particular company
-    info()
+    info(choice)
     {
         try
         {
-            this.display();
-            console.log("Enter between 1-n=");
-            var n = util.inputIntegerRead();
-            var len = this.data.stock.length;
-            if(n>len)   throw  'No share present at that location'
+            if(choice==undefined||choice==null)   throw 'Cannot be undefined or null'
+            if(choice==' ')   throw 'Cannot be empty'
+            if(isNaN(choice))   throw 'Input should be a number'
+            let length = this.data.stock.length;
+            if(choice>length)   throw  'No share present at that location'
             let i=0;
-            while(i<n-1)
+            while(i<choice-1)
             {
                 i++;
             }
-            console.log(this.data.stock[n-1]);
+            console.log(`Name of Corporation:${this.data.stock[choice-1].corporation}`);
+            console.log(`Number of shares:${this.data.stock[choice-1].noOfShares}`);
+            console.log(`Price per each Share:${this.data.stock[choice-1].priceOfEach}`);
         }
         catch(e)
         {
-            console.log(e);
+            return e;
         }
     }
 
-    purchase()
+    purchase(numberOfPurchases)
     {
         //to display price to purchase 
         try
         {
-            this.display();
-            console.log("Enter share you wanna purchase(in between 1-n)=");
-            var n = util.inputIntegerRead();
-            var len = this.data.stock.length;
-            if(n>len)   throw  'No share present at that location'
+            if(numberOfPurchases==undefined||numberOfPurchases==null)   throw 'Cannot be undefined or null'
+            if(numberOfPurchases==' ')   throw 'Cannot be empty'
+            if(isNaN(numberOfPurchases))   throw 'Input should be a number'
+
+            let length = this.data.stock.length;
+            if(numberOfPurchases>length)   throw  'No share present at that location'
             let i=0;
-            while(i<n-1)
+            while(i<numberOfPurchases-1)
             {
                 i++;
             }
-            console.log("One share of " + this.data.stock[n-1].corporation + " costs " + this.data.stock[n-1].priceOfEach+" Rupees");
+            console.log("One share of " + this.data.stock[numberOfPurchases-1].corporation + " costs " + this.data.stock[numberOfPurchases-1].priceOfEach+" Rupees");
 
         }
         catch(e)
         {
-            console.log(e);
+            return e;
         }
 
     }
