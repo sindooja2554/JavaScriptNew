@@ -1,5 +1,9 @@
 var u= require('../../utility/utility');
+<<<<<<< HEAD
 var ut = require('./commercialM6');
+=======
+var ut = require('./commercialM');
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
 var util = require('../../utility/LinkedList');
 var utll = require('./BuyOrSell');
 var utl = new utll.BuySellStock();
@@ -10,7 +14,11 @@ class StockHolder
 {
     constructor()
     {
+<<<<<<< HEAD
         var content = u.readFile('/home/admin1/JavaScriptNew-master/OOP/json/user.json');
+=======
+        var content = u.readFile('/home/admin1/javascript-master/user.json');
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
         //console.log()
         this.value = JSON.parse(content);
     }
@@ -27,6 +35,7 @@ class User extends StockHolder
 
     addUser()
     {
+<<<<<<< HEAD
         var content = /^[a-zA-Z]+$/;
         console.log("Enter user name=");
         var userName = u.inputStringRead();
@@ -84,6 +93,22 @@ class User extends StockHolder
             return false
         }
     }
+=======
+        console.log("Enter user name=");
+        var userName = u.inputStringRead();
+        console.log("Enter number of shares=");
+        var noOfshare = u.inputIntegerRead();
+        console.log("Enter share price for each share=");
+        var price = u.inputIntegerRead();
+        var user = {
+            "userName" : userName,
+            "noOfshare" : noOfshare,
+            "price" : price
+        }
+        list.add(user);
+    }
+
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
     removeUser()
     {
         var current=list.head;
@@ -96,7 +121,10 @@ class User extends StockHolder
         if(current!=null){
             list.remove(current.data);
             console.log("User detalis remove.Successfully...");
+<<<<<<< HEAD
             this.writeToFile();
+=======
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
         }
         else{
             console.log("User name not in the list");
@@ -113,16 +141,25 @@ class User extends StockHolder
             this.value.user.push(current.data);
             current=current.next;
         }
+<<<<<<< HEAD
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/user.json',JSON.stringify(this.value));
+=======
+        fs.writeFileSync('/home/admin1/javascript-master/user.json',JSON.stringify(this.value));
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
     }
 
     displayUserShare()
     {
+<<<<<<< HEAD
         var content = fs.readFileSync('/home/admin1/JavaScriptNew-master/OOP/json/user.json');
+=======
+        var content = fs.readFileSync('/home/admin1/javascript-master/user.json');
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
         var data = JSON.parse(content);
         console.log(data);
     }
 
+<<<<<<< HEAD
     displayUserName()
     {
         for(var i=0;i<this.data.user.length;i++){
@@ -130,6 +167,16 @@ class User extends StockHolder
         }
     }
 
+=======
+    buy()
+    {
+        if(utl.buyStock())
+        {
+            
+        }
+
+    }
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
 }
 
 module.exports={

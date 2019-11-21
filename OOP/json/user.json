@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"user":[{"userName":"sid","noOfShare":40,"price":2000},{"userName":"rid","noOfShare":35,"price":3000},{"userName":"goldy","noOfShare":35,"price":4000}]}
+=======
+{"user":[{"userName":"sid","noOfShare":23,"price":2000},{"userName":"rid","noOfShare":20,"price":3000},{"userName":"goldy","noOfShare":15,"price":4000},{"userName":"Sindhu","noOfshare":54,"price":700}]}
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4

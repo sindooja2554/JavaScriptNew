@@ -6,7 +6,11 @@ class Stock
 {
     constructor()
     {
+<<<<<<< HEAD
         var content = u.readFile('/home/admin1/JavaScriptNew-master/OOP/json/commercial.json');
+=======
+        var content = u.readFile('/home/admin1/javascript-master/OOP/json/commercial.json');
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
         //console.log()
         this.value = JSON.parse(content);
     }
@@ -29,6 +33,7 @@ class Company extends Stock
                companyName==null||noOfshare==null||symbol==null||price==null)  throw 'Cannot be undefined or null'
             if(companyName==' '||noOfshare==' '||symbol==' '||price==' ')  throw 'Cannot be empty'
             if(isNaN(noOfshare)||isNaN(price))  throw 'Should be a number'
+<<<<<<< HEAD
             if(!this.isPresent(companyName))
             {
                 var stock = {
@@ -77,11 +82,32 @@ class Company extends Stock
             return false
         }
     }
+=======
+            var stock = {
+                "companyName" : companyName,
+                "noOfshare" : noOfshare,
+                "symbol" : symbol,
+                "price" : price
+            }
+            list.add(stock);
+            this.writeToFile();
+        }
+        catch(e)
+        {
+            return e
+        }
+
+    }
+
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
     removeCompany(companyName)
     {
         try
         {
+<<<<<<< HEAD
             console.log(companyName);
+=======
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
             if(companyName==undefined||companyName==null)  throw 'Cannot be undefined or null'
             if(companyName==' ')  throw 'Cannot be empty'
             if(!isNaN(companyName))   throw  'Should be a character string'
@@ -123,7 +149,11 @@ class Company extends Stock
             this.value.stock.push(current.data);
             current=current.next;
         }
+<<<<<<< HEAD
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/commercial.json',JSON.stringify(this.value));
+=======
+        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/commercial.json',JSON.stringify(this.value));
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
     }
 
     displaycompanyShare()
@@ -131,8 +161,13 @@ class Company extends Stock
         for(let i=0;i<this.value.stock.length;i++)
         {
             console.log(`Name of Corporation:${this.value.stock[i].companyName}`);
+<<<<<<< HEAD
             console.log(`Number of shares:${this.value.stock[i].noOfshare}`);
             console.log(`Symbol:${this.value.stock[i].symbol}`);
+=======
+            console.log(`Number of shares:${this.value.stock[i].noOfShares}`);
+            console.log(`Number of shares:${this.value.stock[i].symbol}`);
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
             console.log(`Price per each Share:${this.value.stock[i].price}`);
             console.log();
         }

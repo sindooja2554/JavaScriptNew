@@ -37,8 +37,12 @@ class DeckQueue
         {
             return e
         }
+<<<<<<< HEAD
     } 
     
+=======
+    }  
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
 }
 
 

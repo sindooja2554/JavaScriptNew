@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 var utility = require('./utilityOp/UserM');
 var util = new utility.User();
 var utilty = require('./buySell');
 var utl = new utilty.BuySellStock();
 var u = require('../utility/utility')
+=======
+var utility = require('./utility/UserM');
+var util = new utility.User();
+var utilty = require('./buySell');
+var utl = new utilty.BuySellStock();
+var u = require('./utility/utility')
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
 class userLogin
 {
     user()
     {
+<<<<<<< HEAD
  
+=======
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
         util.addList();
         do
         {

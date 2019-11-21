@@ -4,13 +4,18 @@ class stock
 {
     constructor()
     {
+<<<<<<< HEAD
         var content = fs.readFileSync('/home/admin1/JavaScriptNew-master/OOP/json/stock.json');
+=======
+        var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/stock.json');
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
         this.data = JSON.parse(content);
     }
 }
 
 class stockManagement extends stock
 {
+<<<<<<< HEAD
     addStock()
     {
         console.log('Enter number of stock you wanna add=');
@@ -81,6 +86,8 @@ class stockManagement extends stock
             return false
         }
     }
+=======
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
     //function to display names of company
     display()
     {
@@ -146,3 +153,10 @@ module.exports=
 {
     stockManagement
 }
+<<<<<<< HEAD
+=======
+
+
+// var a = new stockManagement();
+// a.purchase();
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4

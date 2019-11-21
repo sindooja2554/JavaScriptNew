@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*/*********************************************Inventory_Management*************************************
 @Description-Extend the above program to Create InventoryManager to manage the Inventory.
     The Inventory Manager will use InventoryFactory to create Inventory Object from JSON.The 
@@ -15,3 +16,12 @@ var utility = require('./utilityOp/inventoryM');
 var inventories = new utility.inventoryManagement();
 inventories.inventoryManagement();
 
+=======
+var util = require('./utilityOp/inventoryM');
+var u = new util.inventoryManagement();
+var fs = require('fs')
+
+u.inventoryManagement();
+//u.displayAvailableStock(3);
+//u.displayAvailableStockOfParticular(2);
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4

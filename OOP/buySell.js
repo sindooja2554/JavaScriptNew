@@ -17,10 +17,15 @@ class BuySellStock {
             else if (ch == 3) {
                 buySell.availableStock();
                 //var ch=
+<<<<<<< HEAD
                 //buySell.infoStock();
                 //var choice = rl.questionInt("Enter your choice=");
                 buySell.buyStock();
                 
+=======
+                buySell.infoStock();
+                buySell.buyStock(ch);
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
             }
             else if (ch == 4) {
                 return;

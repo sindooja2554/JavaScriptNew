@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"stock":[{"companyName":"Google","noOfshare":41,"symbol":"G","price":60000},{"companyName":"Infy","noOfshare":45,"symbol":"G","price":4375000}]}
+=======
+{"stock":[{"companyName":"google","noOfshare":"73","symbol":"G","price":"90"}]}
+>>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
