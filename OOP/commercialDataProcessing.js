@@ -1,3 +1,12 @@
+/*/*****************************************Commercial_Data_Processing***************************************
+@Description-StockAccount.java implements a data type that might be used by a financial institution
+    to keep track of customer information.
+@I/P- read json files
+@Logic-Input from user to buy and update changes to files
+@Output-write to json files 
+@Aurhor-Sindooja Gajam
+@Date-19/11/19
+/*************************************************************************************************/
 var utility = require('./commercialData');
 var utilty = require('./userD');
 var u = require('../utility/utility')

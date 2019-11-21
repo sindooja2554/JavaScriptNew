@@ -37,7 +37,8 @@ class DeckQueue
         {
             return e
         }
-    }  
+    } 
+    
 }
 
 

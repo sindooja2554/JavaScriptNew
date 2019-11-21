@@ -34,7 +34,7 @@ class User extends StockHolder
         if(!content.test(userName))   
         {
             //if invalid input again take input
-            console.log("Enter company name=");
+            console.log("Enter user name=");
             var userName = u.inputStringRead();
         }
         if(!this.isPresent(userName))
@@ -49,6 +49,7 @@ class User extends StockHolder
                 "price" : price
             }
             list.add(user);
+            this.writeToFile();
         }  
         else
         {
@@ -64,7 +65,7 @@ class User extends StockHolder
         for(let i=0;i<this.value.user.length;i++)
         {
             //comparing the input from user and the item object
-            if(this.value.user[i].companyName.toLowerCase() == companyName.toLowerCase())
+            if(this.value.user[i].userName.toLowerCase() == userName.toLowerCase())
             {        
                 present=true;
                 break;
@@ -95,6 +96,7 @@ class User extends StockHolder
         if(current!=null){
             list.remove(current.data);
             console.log("User detalis remove.Successfully...");
+            this.writeToFile();
         }
         else{
             console.log("User name not in the list");
@@ -121,14 +123,13 @@ class User extends StockHolder
         console.log(data);
     }
 
-    buy()
+    displayUserName()
     {
-        if(utl.buyStock())
-        {
-            
+        for(var i=0;i<this.data.user.length;i++){
+            console.log((i+1)+"."+this.data.user[i].userName);
         }
-
     }
+
 }
 
 module.exports={

@@ -132,7 +132,7 @@ class Company extends Stock
         {
             console.log(`Name of Corporation:${this.value.stock[i].companyName}`);
             console.log(`Number of shares:${this.value.stock[i].noOfshare}`);
-            console.log(`Number of shares:${this.value.stock[i].symbol}`);
+            console.log(`Symbol:${this.value.stock[i].symbol}`);
             console.log(`Price per each Share:${this.value.stock[i].price}`);
             console.log();
         }
