@@ -7,7 +7,7 @@ class inventory
 
         var content = fs.readFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json');
 
-        var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json');
+        //var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json');
 
         this.data = JSON.parse(content)
     }
@@ -47,26 +47,6 @@ class inventoryManagement extends inventory
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
 
-
-        console.log("Enter no. of kgs=");
-        var share= util.inputIntegerRead();
-        if(isNaN(share))         throw 'Invalid input'
-    
-        console.log("Enter Price =");
-        var price = util.inputIntegerRead();
-        if(isNaN(price))         throw 'Invalid input'
-    
-        this.data.Rice.push({
-
-            "name": name,
-            "weight": share,
-            "pricePerKg": price
-
-        })
-
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-        this.inventoryManagement();
-
     }
 
     addPulses()
@@ -98,25 +78,6 @@ class inventoryManagement extends inventory
         })
         
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-        this.inventoryManagement();
-
-        console.log("Enter no. of kgs=");
-        var share= util.inputIntegerRead();
-        if(isNaN(share))         throw 'Invalid input'
-    
-        console.log("Enter Price =");
-        var price = util.inputIntegerRead();
-        if(isNaN(price))         throw 'Invalid input'
-    
-        this.data.Pulses.push({
-
-            "name": name,
-            "weight": share,
-            "pricePerKg": price
-
-        })
-
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
 
     }
@@ -155,26 +116,7 @@ class inventoryManagement extends inventory
         this.inventoryManagement();
 
     }
-    /*{
-        console.log("Enter no. of kgs=");
-        var share= util.inputIntegerRead();
-        if(isNaN(share))         throw 'Invalid input'
-    
-        console.log("Enter Price =");
-        var price = util.inputIntegerRead();
-        if(isNaN(price))         throw 'Invalid input'
-    
-        this.data.Wheat.push({
 
-            "name": name,
-            "weight": share,
-            "pricePerKg": price
-
-        })
-
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-        this.inventoryManagement();
-    }*/
 
     //display stock names
     displayAvailableStock(choice)
@@ -202,11 +144,6 @@ class inventoryManagement extends inventory
             for(let i=0;i<this.data.Wheat.length;i++)
             {
                 console.log(i+1," "+this.data.Wheat[i].name);
-
-            for(let i=0;i<this.data.Pulses.length;i++)
-            {
-                console.log(i+1," "+this.data.Pulses[i].name);
-
             }
         }
     }
@@ -284,6 +221,7 @@ class inventoryManagement extends inventory
                     //if found update price
                     console.log('Enter new price of rice=');
                     this.data.Rice[i].pricePerKg=util.inputIntegerRead();
+                    break;
                 }
             }
         }
@@ -297,6 +235,7 @@ class inventoryManagement extends inventory
                     //if found update weight
                     console.log('Enter new available weight in kgs of pulses=');
                     this.data.Rice[i].weight=util.inputIntegerRead();
+                    break;
                 }
             }            
         }
@@ -427,25 +366,6 @@ class inventoryManagement extends inventory
         }
         //write changes back to file
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-
-    //to delete
-    deleteRice()
-    {
-
-        console.log("Enter stockName to remove=");
-        var name = util.inputStringRead();
-        for(let i=0;i<this.data.Rice.length;i++)
-        {
-            if(this.data.Rice[i].name.toLowerCase() == name.toLowerCase())
-            {
-                var index = this.data.Rice.indexOf(this.data.Rice[i]);
-                this.data.Rice.splice(index,1);
-
-            }
-        }
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-
-        this.inventoryManagement();
     }
 
     deletePulses()
@@ -471,20 +391,6 @@ class inventoryManagement extends inventory
         }
         //write changes back to file
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-
-        console.log("Enter stockName to remove=");
-        var name = util.inputStringRead();
-        for(let i=0;i<this.data.Pulses.length;i++)
-        {
-            if(this.data.Pulses[i].name.toLowerCase() == name.toLowerCase())
-            {
-                var index = this.data.Pulses.indexOf(this.data.Pulses[i]);
-                this.data.Pulses.splice(index,1);
-
-            }
-        }
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-
         this.inventoryManagement();
     }
 
@@ -511,21 +417,6 @@ class inventoryManagement extends inventory
         }
         //write changes back to file
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-
-        
-        console.log("Enter stockName to remove=");
-        var name = util.inputStringRead();
-        for(let i=0;i<this.data.Wheat.length;i++)
-        {
-            if(this.data.Wheat[i].name.toLowerCase() == name.toLowerCase())
-            {
-                var index = this.data.Wheat.indexOf(this.data.Pulses[i]);
-                this.data.Wheat.splice(index,1);
-
-            }
-        }
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-
         this.inventoryManagement();
     }
 
@@ -534,7 +425,7 @@ class inventoryManagement extends inventory
 
             var content = fs.readFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json');
 
-            var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json');
+            //var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json');
 
             var data = JSON.parse(content);
             console.log(data);
@@ -633,6 +524,7 @@ class inventoryManagement extends inventory
     }
 
 }
+    
 
 module.exports={
     inventoryManagement

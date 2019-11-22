@@ -28,6 +28,7 @@ class AddressBook extends Address
         var mobileNo = util.inputIntegerRead();
         if(!this.isPresent(firstName))
         {
+
             //pushing data to this.data
             this.data.AddressBook.push({
                 "firstName":firstName,
@@ -41,6 +42,21 @@ class AddressBook extends Address
     
             util.writeFile("/home/admin1/JavaScriptNew-master/OOP/json/addressBook.json",this.data);
         }
+        else if(!this.isPresent(lastName))
+        {
+            //pushing data to this.data
+            this.data.AddressBook.push({
+                "firstName":firstName,
+                "lastName":lastName,
+                "address":address,
+                "city":city,
+                "state":state,
+                "zipCode":zipCode,
+                "mobileNo":mobileNo
+            })
+    
+            util.writeFile("/home/admin1/JavaScriptNew-master/OOP/json/addressBook.json",this.data);
+        }          
         else
         {
             console.log('Your details are already in address book');
@@ -48,6 +64,28 @@ class AddressBook extends Address
 
     }
 
+    //to remove details of the person
+    removePersonsDetails()
+    {
+        console.log('Enter first name of person to remove');
+        console.log('Enter first name=');
+        var firstName = util.inputStringRead();
+        if(this.isPresent(firstName))
+        {
+            for (let i = 0; i < this.data.AddressBook.length; i++) 
+            {
+                if(this.data.AddressBook[i].firstName.toLowerCase()==firstName.toLowerCase())
+                {
+                    var index = this.data.AddressBook.indexOf(this.data.AddressBook.firstName);
+                    //delete the element
+                    this.data.AddressBook.splice(index,1);
+                    util.writeFile('/home/admin1/JavaScriptNew-master/OOP/json/addressBook.json',this.data);
+                    console.log('Details have been removed successfully');
+                    break;
+                }  
+            }
+        }
+    }
     //to check if corportation is present
     isPresent(firstName)
     {
@@ -56,6 +94,33 @@ class AddressBook extends Address
         {
             //comparing the input from user and the item object
             if(this.data.AddressBook[i].firstName.toLowerCase() == firstName.toLowerCase())
+            {        
+                present=true;
+                break;
+            }
+            else
+            {
+                present=false;
+            }
+        }
+        if(present===true)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+
+    //to check if corportation is present
+    isPresentLastName(lastName)
+    {
+        var present=false;
+        for(let i=0;i<this.data.AddressBook.length;i++)
+        {
+            //comparing the input from user and the item object
+            if(this.data.AddressBook[i].lastName.toLowerCase() == lastName.toLowerCase())
             {        
                 present=true;
                 break;
@@ -158,11 +223,13 @@ class AddressBook extends Address
         for(let i=0;i<this.data.AddressBook.length;i++)
         {
             for(let j=0;j<this.data.AddressBook.length-1;j++)
-            if(this.data.AddressBook[i].firstName.toLowerCase()<this.data.AddressBook[j].firstName.toLowerCase())
             {
-                temp = this.data.AddressBook[i];
-                this.data.AddressBook[i] = this.data.AddressBook[j];
-                this.data.AddressBook[j] = temp;
+                if(this.data.AddressBook[i].firstName.toLowerCase()<this.data.AddressBook[j].firstName.toLowerCase())
+                {
+                    temp = this.data.AddressBook[i];
+                    this.data.AddressBook[i] = this.data.AddressBook[j];
+                    this.data.AddressBook[j] = temp;
+                }
             }
         }
         console.log(this.data.AddressBook);
@@ -174,11 +241,13 @@ class AddressBook extends Address
         for(let i=0;i<this.data.AddressBook.length;i++)
         {
             for(let j=0;j<this.data.AddressBook.length-1;j++)
-            if(this.data.AddressBook[i].zipCode<this.data.AddressBook[j].zipCode)
             {
-                temp = this.data.AddressBook[i];
-                this.data.AddressBook[i] = this.data.AddressBook[j];
-                this.data.AddressBook[j] = temp;
+                if(this.data.AddressBook[i].zipCode<this.data.AddressBook[j].zipCode)
+                {
+                    temp = this.data.AddressBook[i];
+                    this.data.AddressBook[i] = this.data.AddressBook[j];
+                    this.data.AddressBook[j] = temp;
+                }
             }
         }
         console.log(this.data.AddressBook);

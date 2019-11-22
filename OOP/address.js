@@ -20,9 +20,35 @@ class Address
             switch(choice)
             {
                 case 1:
-                    
+                    addressBook.addPerson();
+                    break;
+                case 2:
+                    addressBook.edit();
+                    break;
+                case 3:
+                    addressBook.displayAddressBook();
+                    break;
+                case 4:
+                    addressBook.displayParticularAddress();
+                    break;
+                case 5:
+                    addressBook.removePersonsDetails();
+                    break;
+                case 6:
+                    addressBook.sortByFirstName();
+                    break;
+                case 7:
+                    addressBook.sortByZipCode();
+                    break;
+                case 8:
+                    return;
+                default:
+                    console.log('Wrong Choice');
             }
         }
-        
+        while(choice);
     }
 }
+
+var address = new Address();
+address.addressBook();

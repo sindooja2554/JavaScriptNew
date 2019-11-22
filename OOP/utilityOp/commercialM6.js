@@ -150,7 +150,7 @@ class Company extends Stock
 
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/commercial.json',JSON.stringify(this.value));
 
-        fs.writeFileSync('/home/admin1/javascript-master/OOP/json/commercial.json',JSON.stringify(this.value));
+        //fs.writeFileSync('/home/admin1/javascript-master/OOP/json/commercial.json',JSON.stringify(this.value));
 
     }
 
@@ -162,16 +162,9 @@ class Company extends Stock
 
             console.log(`Number of shares:${this.value.stock[i].noOfshare}`);
             console.log(`Symbol:${this.value.stock[i].symbol}`);
-
-            console.log(`Number of shares:${this.value.stock[i].noOfShares}`);
-            console.log(`Number of shares:${this.value.stock[i].symbol}`);
-
             console.log(`Price per each Share:${this.value.stock[i].price}`);
             console.log();
         }
-        // console.log(`Name of Corporation:${this.data.stock[choice-1].corporation}`);
-        // console.log(`Number of shares:${this.data.stock[choice-1].noOfShares}`);
-        // console.log(`Price per each Share:${this.data.stock[choice-1].priceOfEach}`);
     }
 }
 

@@ -11,9 +11,6 @@
 var utility = require('./commercialData');
 var utilty = require('./userD');
 
-var utility = require('./commercialData');
-var utilty = require('../userD');
-
 var u = require('../utility/utility')
 var util = new utility.companyLogin();
 var utl = new utilty.userLogin();

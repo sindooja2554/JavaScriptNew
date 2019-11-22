@@ -22,11 +22,6 @@ class Stock
         //to parse buffered values and store in variable        
         this.value=JSON.parse(userContent);
 
-        var content=util.readFile('/home/admin1/javascript-master/commercial.json');
-        this.data=JSON.parse(content);
-        var length=this.data.stock.length;
-        //console.log(length);
-
     }
 }
 class BuySellStock extends Stock
@@ -110,23 +105,6 @@ class BuySellStock extends Stock
         }
     }
 
-
-    displayStockName()
-    {
-        //to display the stock present in the file
-
-    buyStock(choice)
-    {
-        var length=this.data.stock.length;
-         //purches requried shares & calculate the total stock price 
-        var shares = rl.question("Enter no of shares you want to purchase or buy:");
-
-        
-        if(shares>length.NoOfShare) throw 'enter valid number'
-        var totalPrice=this.claculateStockPrice(choice-1,shares);
-        console.log("Total Stock Price:"+totalPrice); 
-        return true
-    } 
     displayStockName()
     {
 
@@ -188,17 +166,8 @@ class BuySellStock extends Stock
     writeToCompanyFile()
     {
        fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/commercial.json',JSON.stringify(this.data));        
-
-        console.log("NameOfCompany :"+this.data.stock[choice].companyName
-        +"\nNumber Of Shares :"+this.data.stock[choice].noOfShare+"\nStock Price :"
-        +this.data.stock[choice].price+"\nSymbol :"+this.data.stock[choice].symbol);
     }
-    claculateStockPrice(choice,shares)
-    {
-        var value=this.data.stock[choice].price*shares;
-        return value
 
-    }
 }
 module.exports={
     BuySellStock
