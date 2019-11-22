@@ -4,11 +4,11 @@ class inventory
 {
     constructor()
     {
-<<<<<<< HEAD
+
         var content = fs.readFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json');
-=======
+
         var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json');
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
         this.data = JSON.parse(content)
     }
 }
@@ -28,7 +28,7 @@ class inventoryManagement extends inventory
             console.log("Enter name of rice=");
             var name = util.inputStringRead();
         }
-<<<<<<< HEAD
+
 
         console.log("Enter no. of kgs=");
         var share= util.inputIntegerRead();
@@ -47,7 +47,7 @@ class inventoryManagement extends inventory
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
 
-=======
+
         console.log("Enter no. of kgs=");
         var share= util.inputIntegerRead();
         if(isNaN(share))         throw 'Invalid input'
@@ -66,7 +66,7 @@ class inventoryManagement extends inventory
 
         fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
     }
 
     addPulses()
@@ -81,7 +81,7 @@ class inventoryManagement extends inventory
             console.log("Enter name of pulses=");
             var name = util.inputStringRead();
         }
-<<<<<<< HEAD
+
 
         console.log("Enter no. of kgs=");
         var share= util.inputIntegerRead();
@@ -100,7 +100,6 @@ class inventoryManagement extends inventory
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
 
-=======
         console.log("Enter no. of kgs=");
         var share= util.inputIntegerRead();
         if(isNaN(share))         throw 'Invalid input'
@@ -119,7 +118,7 @@ class inventoryManagement extends inventory
 
         fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
     }
 
     addWheat()
@@ -134,7 +133,7 @@ class inventoryManagement extends inventory
             console.log("Enter name of pulses=");
             var name = util.inputStringRead();
         }
-<<<<<<< HEAD
+
         
         console.log("Enter no. of kgs=");
         var share= util.inputIntegerRead();
@@ -156,8 +155,7 @@ class inventoryManagement extends inventory
         this.inventoryManagement();
 
     }
-
-=======
+    /*{
         console.log("Enter no. of kgs=");
         var share= util.inputIntegerRead();
         if(isNaN(share))         throw 'Invalid input'
@@ -176,8 +174,8 @@ class inventoryManagement extends inventory
 
         fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
         this.inventoryManagement();
-    }
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+    }*/
+
     //display stock names
     displayAvailableStock(choice)
     {
@@ -200,15 +198,15 @@ class inventoryManagement extends inventory
 
         if(choice==3)
         {
-<<<<<<< HEAD
+
             for(let i=0;i<this.data.Wheat.length;i++)
             {
                 console.log(i+1," "+this.data.Wheat[i].name);
-=======
+
             for(let i=0;i<this.data.Pulses.length;i++)
             {
                 console.log(i+1," "+this.data.Pulses[i].name);
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
             }
         }
     }
@@ -217,10 +215,9 @@ class inventoryManagement extends inventory
     {
         if(choice==1)
         {
-<<<<<<< HEAD
+
             //loop to display all items of Rice
-=======
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
             for(let i=0;i<this.data.Rice.length;i++)
             {
                 console.log("Name of rice="," "+this.data.Rice[i].name);
@@ -232,10 +229,9 @@ class inventoryManagement extends inventory
 
         if(choice==2)
         {
-<<<<<<< HEAD
+
             //loop to display all items of Pulses
-=======
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
             for(let i=0;i<this.data.Pulses.length;i++)
             {
                 console.log("Name of rice="," "+this.data.Pulses[i].name);
@@ -247,10 +243,9 @@ class inventoryManagement extends inventory
 
         if(choice==3)
         {
-<<<<<<< HEAD
+
             //loop to display all items of Wheat
-=======
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
             for(let i=0;i<this.data.Wheat.length;i++)
             {
                 console.log("Name of rice="," "+this.data.Wheat[i].name);
@@ -260,7 +255,7 @@ class inventoryManagement extends inventory
             }
         }
     }
-<<<<<<< HEAD
+
 
     //function to update price of rice
     updateRice()
@@ -432,7 +427,7 @@ class inventoryManagement extends inventory
         }
         //write changes back to file
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-=======
+
     //to delete
     deleteRice()
     {
@@ -449,13 +444,13 @@ class inventoryManagement extends inventory
             }
         }
         fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
         this.inventoryManagement();
     }
 
     deletePulses()
     {
-<<<<<<< HEAD
+
         //input from user to remove
         console.log("Enter stockName to remove=");
         var name = util.inputStringRead();
@@ -476,7 +471,6 @@ class inventoryManagement extends inventory
         }
         //write changes back to file
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-=======
 
         console.log("Enter stockName to remove=");
         var name = util.inputStringRead();
@@ -490,13 +484,13 @@ class inventoryManagement extends inventory
             }
         }
         fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
         this.inventoryManagement();
     }
 
     deleteWheat()
     {
-<<<<<<< HEAD
+
         //input from user to remove
         console.log("Enter stockName to remove=");
         //loop to will run upto length
@@ -517,7 +511,7 @@ class inventoryManagement extends inventory
         }
         //write changes back to file
         fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
-=======
+
         
         console.log("Enter stockName to remove=");
         var name = util.inputStringRead();
@@ -531,28 +525,28 @@ class inventoryManagement extends inventory
             }
         }
         fs.writeFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json',JSON.stringify(this.data));
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
         this.inventoryManagement();
     }
 
     inventoryManagement()
     {
-<<<<<<< HEAD
+
             var content = fs.readFileSync('/home/admin1/JavaScriptNew-master/OOP/json/inventoryManager.json');
-=======
+
             var content = fs.readFileSync('/home/admin1/javascript-master/OOP/json/inventoryManager.json');
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
             var data = JSON.parse(content);
             console.log(data);
             console.log("1.Add");
             console.log("2.Delete Item");
             console.log("3.Display Particular Stock");
-<<<<<<< HEAD
+
             console.log("4.Update Item");
             console.log("5.Exit");
-=======
+
             console.log("4.Exit");
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
             console.log("Enter your choice=");
             var choice = util.inputIntegerRead();
 
@@ -610,7 +604,7 @@ class inventoryManagement extends inventory
                        //console.log(this.data);       
                        //this.inventoryManagement();
                        break;
-<<<<<<< HEAD
+
                 case 4:
                         console.log('1.Rice');
                         console.log('2.Pulses');
@@ -632,11 +626,7 @@ class inventoryManagement extends inventory
                         break;
 
                 case 5: 
-=======
-
-                case 4: 
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
-                       return ;
+                        return
             }
         
 

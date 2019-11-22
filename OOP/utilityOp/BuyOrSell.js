@@ -1,19 +1,18 @@
 var util=require('../../utility/utility');
 var rl=require('readline-sync')
-<<<<<<< HEAD
+
 var utility = require('./commercialM6');
 var utilty = require('./UserM');
 
 var fs = require('fs');
 var commercial=new utility.Company();
-=======
 
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
 class Stock
 {
     constructor()
     {
-<<<<<<< HEAD
+
         //content of json file will be saved in variable
         var content=util.readFile('/home/admin1/JavaScriptNew-master/OOP/json/commercial.json');
         //to parse buffered values and store in variable
@@ -22,12 +21,12 @@ class Stock
         var userContent = util.readFile('/home/admin1/JavaScriptNew-master/OOP/json/user.json');
         //to parse buffered values and store in variable        
         this.value=JSON.parse(userContent);
-=======
+
         var content=util.readFile('/home/admin1/javascript-master/commercial.json');
         this.data=JSON.parse(content);
         var length=this.data.stock.length;
         //console.log(length);
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
     }
 }
 class BuySellStock extends Stock
@@ -47,7 +46,7 @@ class BuySellStock extends Stock
         this.displayStock("\t"+choice-1);
         return choice;
     }
-<<<<<<< HEAD
+
     buyStock()
     {
         var length=this.data.stock.length;
@@ -115,7 +114,7 @@ class BuySellStock extends Stock
     displayStockName()
     {
         //to display the stock present in the file
-=======
+
     buyStock(choice)
     {
         var length=this.data.stock.length;
@@ -130,14 +129,13 @@ class BuySellStock extends Stock
     } 
     displayStockName()
     {
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
         for(var i=0;i<this.data.stock.length;i++){
             console.log((i+1)+"."+this.data.stock[i].companyName);
         }
     }
     displayStock(choice)
     {
-<<<<<<< HEAD
         //Info of particular stock
         console.log("NameOfCompany :"+this.data.stock[choice].companyName
         +"\nNumber Of Shares :"+this.data.stock[choice].noOfshare+"\nStock Price :"
@@ -190,7 +188,7 @@ class BuySellStock extends Stock
     writeToCompanyFile()
     {
        fs.writeFileSync('/home/admin1/JavaScriptNew-master/OOP/json/commercial.json',JSON.stringify(this.data));        
-=======
+
         console.log("NameOfCompany :"+this.data.stock[choice].companyName
         +"\nNumber Of Shares :"+this.data.stock[choice].noOfShare+"\nStock Price :"
         +this.data.stock[choice].price+"\nSymbol :"+this.data.stock[choice].symbol);
@@ -199,7 +197,7 @@ class BuySellStock extends Stock
     {
         var value=this.data.stock[choice].price*shares;
         return value
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
     }
 }
 module.exports={

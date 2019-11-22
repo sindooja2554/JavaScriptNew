@@ -26,7 +26,7 @@ class AddressBook extends Address
         var zipCode = util.inputIntegerRead();
         console.log('Enter mobile number=');
         var mobileNo = util.inputIntegerRead();
-        if(!this.isPresent(mobileNo))
+        if(!this.isPresent(firstName))
         {
             //pushing data to this.data
             this.data.AddressBook.push({
@@ -49,13 +49,13 @@ class AddressBook extends Address
     }
 
     //to check if corportation is present
-    isPresent(mobileNo)
+    isPresent(firstName)
     {
         var present=false;
         for(let i=0;i<this.data.AddressBook.length;i++)
         {
             //comparing the input from user and the item object
-            if(this.data.AddressBook[i].mobileNo == mobileNo)
+            if(this.data.AddressBook[i].firstName.toLowerCase() == firstName.toLowerCase())
             {        
                 present=true;
                 break;
@@ -78,10 +78,10 @@ class AddressBook extends Address
     //editing the details in address book
     edit()
     {
-        console.log('Please enter your mobile number to edit your details in address book');
-        console.log('Enter mobile number=');
-        var mobileNo = util.inputIntegerRead();
-        if(this.isPresent(mobileNo))
+        console.log('Please enter your first name to edit your details in address book');
+        console.log('Enter first name=');
+        var firstName = util.inputStringRead();
+        if(this.isPresent(firstName))
         {
             console.log('1.First Name');
             console.log('2.Last Name');
@@ -95,7 +95,7 @@ class AddressBook extends Address
             var choice = util.inputIntegerRead();
             for(let i=0;i<this.data.AddressBook.length;i++)
             {
-                if(this.data.AddressBook[i].mobileNo==mobileNo)
+                if(this.data.AddressBook[i].firstName.toLowerCase()==firstName.toLowerCase())
                 {
                     switch(choice)
                     {
@@ -107,7 +107,7 @@ class AddressBook extends Address
                                 break;
                         case 2:
                                 console.log('Enter your last name=');
-                                var firstName = util.inputStringRead();
+                                var lastName = util.inputStringRead();
                                 this.data.AddressBook[i].lastName = lastName; 
                                 util.writeFile("/home/admin1/JavaScriptNew-master/OOP/json/addressBook.json",this.data);                                
                                 break;
@@ -158,7 +158,7 @@ class AddressBook extends Address
         for(let i=0;i<this.data.AddressBook.length;i++)
         {
             for(let j=0;j<this.data.AddressBook.length-1;j++)
-            if(this.data.AddressBook[i].firstName<this.data.AddressBook[j].firstName)
+            if(this.data.AddressBook[i].firstName.toLowerCase()<this.data.AddressBook[j].firstName.toLowerCase())
             {
                 temp = this.data.AddressBook[i];
                 this.data.AddressBook[i] = this.data.AddressBook[j];
@@ -224,5 +224,6 @@ class AddressBook extends Address
     }
 }
 
-var a = new AddressBook();
-a.displayParticularAddress();
+module.exports={
+    AddressBook
+}

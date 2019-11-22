@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*/*****************************************Commercial_Data_Processing***************************************
 @Description-StockAccount.java implements a data type that might be used by a financial institution
     to keep track of customer information.
@@ -10,10 +10,10 @@
 /*************************************************************************************************/
 var utility = require('./commercialData');
 var utilty = require('./userD');
-=======
+
 var utility = require('./commercialData');
 var utilty = require('../userD');
->>>>>>> 47fc5a05e5d59a6b96e31ebaa5a01b966d3eb6d4
+
 var u = require('../utility/utility')
 var util = new utility.companyLogin();
 var utl = new utilty.userLogin();
