@@ -1,0 +1,19 @@
+{
+  "name": "addressbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.0",
+    "readline-sync": "^1.4.10",
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.17"
+  }
+}
